@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <title>JoPort</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #683b01;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .life-counter {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #000000;
+      color: #ff0000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    nav.navbar {
+      background-color: #17e674ab;
+      padding: 50px 0;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav.navbar li {
+      display: inline;
+    }
+
+    nav.navbar a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #13cbeb;
+      background-color: #e9ec0e;
+      padding: 20px 20px;
+      border-radius: 110px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.navbar a:hover {
+      background-color: #000000;
+      color: #f5f5dc;
+    }
+
+    header h3 {
+      font-size: 2rem;
+      color: #f76319;
+      margin-top: 40px;
+    }
+
+    .statement_text {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      display: block;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(185, 132, 132, 0.7);
+      color: #ee0000;
+      font-weight: bold;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-wrapper:hover .overlay-text {
+      opacity: 1;
+    }
+
+    .grid-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .grid-gallery .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+  </style>
+</head>
+<body>
+  
+  <div class="life-counter">Life: <span id="life">100</span></div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">CASA</a></li>
+      <li><a href="p1.html">Code</a></li>
+      <li><a href="p2.html">Sketches</a></li>
+      <li><a href="p3.html">Videos</a></li>
+      <li><a href="p4.html">3D</a></li>
+      
+    </ul>
+  </nav>
+
+  <header>
+    <h3>SKETCH</h3>
+    <div class="statement_text"><em>DADA IS ALL</em></div>
+  </header>
+ <div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/background.png" alt="Tiled Panel">
+     <div class="overlay-text">CASA</div>
+   </div>
+ </div>
+</main>
+<main>
+ <div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/p3.1.png" alt="Tiled Panel">
+     <div class="overlay-text">LAND</div>
+   </div>
+ </div>
+</main>
+<main>
+ <div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/rider.png" alt="Tiled Panel">
+     <div class="overlay-text">RIDER</div>
+   </div>
+ </div>
+</main>
+<main>
+<div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/duckhunt-bg-4k.png" alt="Tiled Panel">
+     <div class="overlay-text">DUNKHUNT</div>
+   </div>
+ </div>
+ </main>
+ <main>
+ <div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/bg.png" alt="Tiled Panel">
+     <div class="overlay-text">GAME OVER</div>
+   </div>
+ </div>
+</main>
+  <main>
+    <div class="image-gallery">
+      <div class="image-wrapper" onclick="decreaseLife()">
+        <img src="gallery/band.png" alt="Tiled Panel">
+        <div class="overlay-text">BAND</div>
+      </div>
+    </div>
+  </main>
+
+  <main>
+    <div class="image-gallery">
+      <div class="image-wrapper" onclick="decreaseLife()">
+        <img src="gallery/bc.png" alt="Tiled Panel">
+        <div class="overlay-text">Before crash</div>
+      </div>
+    </div>
+  </main>
+   <div class="image-gallery">
+     <div class="image-wrapper" onclick="decreaseLife()">
+       <img src="gallery/coward.png" alt="Tiled Panel">
+       <div class="overlay-text">COWARD</div>
+     </div>
+   </div>
+ </main>
+ <main>
+   <div class="image-gallery">
+     <div class="image-wrapper" onclick="decreaseLife()">
+       <img src="gallery/phenix.png" alt="Tiled Panel">
+       <div class="overlay-text">After crash</div>
+     </div>
+   </div>
+ </main>
+ <div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/sticker.png" alt="Tiled Panel">
+     <div class="overlay-text">Sticker</div>
+   </div>
+ </div>
+
+ <h3>THE JOS</h3>
+  <main>
+    <div class="grid-gallery">
+      <!-- jovanny1–17 -->
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny1.png" alt="jovanny1"><div class="overlay-text">jovanny1</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny2.png" alt="jovanny2"><div class="overlay-text">jovanny2</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny3.png" alt="jovanny3"><div class="overlay-text">jovanny3</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny4.png" alt="jovanny4"><div class="overlay-text">jovanny4</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny5.png" alt="jovanny5"><div class="overlay-text">jovanny5</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny6.png" alt="jovanny6"><div class="overlay-text">jovanny6</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny7.png" alt="jovanny7"><div class="overlay-text">jovanny7</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny8.png" alt="jovanny8"><div class="overlay-text">jovanny8</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny9.png" alt="jovanny9"><div class="overlay-text">jovanny9</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny10.png" alt="jovanny10"><div class="overlay-text">jovanny10</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny11.png" alt="jovanny11"><div class="overlay-text">jovanny11</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny12.png" alt="jovanny12"><div class="overlay-text">jovanny12</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny13.png" alt="jovanny13"><div class="overlay-text">jovanny13</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny14.png" alt="jovanny14"><div class="overlay-text">jovanny14</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny15.png" alt="jovanny15"><div class="overlay-text">jovanny15</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny16.png" alt="jovanny16"><div class="overlay-text">jovanny16</div></div>
+      <div class="image-wrapper" onclick="decreaseLife()"><img src="gallery/jovanny17.png" alt="jovanny17"><div class="overlay-text">jovanny17</div></div>
+    </div>
+  </main>
+ <main>
+   <div class="image-gallery">
+     <div class="image-wrapper" onclick="decreaseLife()">
+       <img src="gallery/boom.png" alt="Tiled Panel">
+       <div class="overlay-text">BOOM</div>
+     </div>
+   </div>
+ </main> <main>
+   <div class="image-gallery">
+     <div class="image-wrapper" onclick="decreaseLife()">
+       <img src="gallery/bum.jpg" alt="Tiled Panel">
+       <div class="overlay-text">BUM</div>
+     </div>
+   </div>
+ </main> <main>
+</main> 
+</main><div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/s1.jpg" alt="Tiled Panel">
+     <div class="overlay-text">1</div>
+   </div>
+ </div>
+</main>
+<div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/s2.jpg" alt="Tiled Panel">
+     <div class="overlay-text">2</div>
+   </div>
+ </div>
+</main>
+<div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/s3.jpg" alt="Tiled Panel">
+     <div class="overlay-text">3</div>
+   </div>
+ </div>
+</main><div class="image-gallery">
+   <div class="image-wrapper" onclick="decreaseLife()">
+     <img src="gallery/s5.jpg" alt="Tiled Panel">
+     <div class="overlay-text">5</div>
+   </div>
+ </div>
+ 
+ <script>
+  let life = 100;
+  function decreaseLife() {
+    life = Math.max(0, life - 5);
+    document.getElementById('life').textContent = life;
+    if (life === 0) {
+      window.location.href = "p5.html";
+    }
+  }
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
